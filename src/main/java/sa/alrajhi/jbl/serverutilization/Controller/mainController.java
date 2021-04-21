@@ -11,4 +11,26 @@ public class mainController {
     public String index() {
         return "index";
     }
+
+
+
+
+
+@GetMapping("/update")
+public void updateEnv(@RequestParam String env,String service,String user){
+    System.out.println(env);
+    System.out.println(service);
+    System.out.println(user);
 }
+
+
+
+
+
+
+
+
+
+
+}
+
