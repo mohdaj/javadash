@@ -6,6 +6,17 @@ public class services {
     String oauth;
     String portal;
 
+    public services() {
+    }
+
+    public services(String wlp) {
+        super();
+        this.wlp = wlp;
+        this.admin = admin;
+        this.oauth = oauth;
+        this.portal = portal;
+    }
+
     public String getWlp() {
         return wlp;
     }

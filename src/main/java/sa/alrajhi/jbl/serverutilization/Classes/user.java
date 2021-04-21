@@ -6,6 +6,17 @@ public class user {
     String oauth;
     String portal;
 
+    public user() {
+    }
+
+    public user(String wlp, String admin, String oauth, String portal) {
+        super();
+        this.wlp = wlp;
+        this.admin = admin;
+        this.oauth = oauth;
+        this.portal = portal;
+    }
+
     public String getWlp() {
         return wlp;
     }

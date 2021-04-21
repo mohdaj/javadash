@@ -5,6 +5,16 @@ public class Ob {
     services services;
     user user;
 
+    public Ob() {
+    }
+
+    public Ob(String env, sa.alrajhi.jbl.serverutilization.Classes.services services, sa.alrajhi.jbl.serverutilization.Classes.user user) {
+        super();
+        this.env = env;
+        this.services = services;
+        this.user = user;
+    }
+
     public String getEnv() {
         return env;
     }
