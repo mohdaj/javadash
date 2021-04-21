@@ -3,6 +3,7 @@ package sa.alrajhi.jbl.serverutilization;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.type.TypeReference;
+import sa.alrajhi.jbl.serverutilization.Classes.Ob;
 
 import java.io.*;
 import java.util.List;
@@ -10,15 +11,11 @@ import java.util.List;
 public class readjson {
     public static void main(String[] args) throws IOException {
         ObjectMapper mapper =new ObjectMapper();
-        InputStream inputStream =new FileInputStream(new File("C:/Users/engmo/Desktop/data.json"));
-        TypeReference<List<object>> listTypeReference= new TypeReference<List<object>>(){};
-        List<object>objects =mapper.readValue(inputStream,listTypeReference);
-        for(object p : objects){
-            System.out.println(p.getEnvironment() + p.getUser().getAdmin());
+        InputStream inputStream =new FileInputStream(new File("/Users/mohammedabujabal/Documents/MY-WOEK/javadash-main/src/main/java/sa/alrajhi/jbl/serverutilization/assets/data.json"));
+        TypeReference<List<Ob>> listTypeReference= new TypeReference<List<Ob>>(){};
+        List<Ob> objects =mapper.readValue(inputStream,listTypeReference);
+        for(Ob p : objects){
+            System.out.println(p.getEnv()+ "\n"+p.getServices().getWlp()+ "\n"+p.getServices().getAdmin() +"\n\n");
         }
-
-
-
-
     }
 }
